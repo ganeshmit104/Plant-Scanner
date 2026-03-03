@@ -215,7 +215,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
               fontSize: 16,
             }}
           >
-            馃尶
+            🌿
           </div>
           <span style={{ fontSize: 11, color: "#4a7a4a", letterSpacing: "0.3em", textTransform: "uppercase" }}>
             Flora.AI
@@ -236,7 +236,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
           <em style={{ color: ACCENT, fontStyle: "italic" }}>Diagnostics</em>
         </h1>
         <p style={{ fontSize: 12, color: "#4a7a4a", letterSpacing: "0.04em", lineHeight: 1.8 }}>
-          Upload a leaf photo 路 Get instant AI analysis 路 Soil 路 Hydration 路 Disease Detection
+          Upload a leaf photo · Get instant AI analysis · Soil · Hydration · Disease Detection
         </p>
       </div>
 
@@ -259,12 +259,12 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
               transition: "all 0.2s",
             }}
           >
-            <div style={{ fontSize: 52, marginBottom: 18, filter: "grayscale(0.2)" }}>馃崈</div>
+            <div style={{ fontSize: 52, marginBottom: 18, filter: "grayscale(0.2)" }}>🍃</div>
             <p style={{ fontFamily: "'Playfair Display', serif", fontSize: 20, color: "#e8f5e8", margin: "0 0 8px" }}>
               Drop a leaf photo here
             </p>
             <p style={{ fontSize: 11, color: "#4a7a4a", letterSpacing: "0.1em" }}>
-              or click to browse &nbsp;路&nbsp; JPG &nbsp;路&nbsp; PNG &nbsp;路&nbsp; WEBP
+              or click to browse &nbsp;·&nbsp; JPG &nbsp;·&nbsp; PNG &nbsp;·&nbsp; WEBP
             </p>
             <input
               ref={fileRef}
@@ -362,7 +362,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
                     transition: "all 0.2s",
                   }}
                 >
-                  {loading ? "鉄? SCANNING" : result ? "鉁? NEW SCAN" : "猬? ANALYZE LEAF"}
+                  {loading ? "⟳  SCANNING" : result ? "✕  NEW SCAN" : "⬡  ANALYZE LEAF"}
                 </button>
 
                 {!result && !loading && (
@@ -381,7 +381,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
                       transition: "all 0.2s",
                     }}
                   >
-                    鈫?CHANGE IMAGE
+                    ← CHANGE IMAGE
                   </button>
                 )}
               </div>
@@ -401,7 +401,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
                   lineHeight: 1.6,
                 }}
               >
-                鈿?{error}
+                ⚠ {error}
               </div>
             )}
 
@@ -447,9 +447,9 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
 
                 {/* Care Grid */}
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginBottom: 16 }}>
-                  <CareCard icon="馃挧" label="Watering" value={result.wateringSchedule} />
-                  <CareCard icon="鈽€锔? label="Sunlight" value={result.sunlight} />
-                  <CareCard icon="馃尡" label="Fertilizer" value={result.fertilizer} />
+                  <CareCard icon="💧" label="Watering" value={result.wateringSchedule} />
+                  <CareCard icon="☀️" label="Sunlight" value={result.sunlight} />
+                  <CareCard icon="🌱" label="Fertilizer" value={result.fertilizer} />
                 </div>
 
                 {/* Soil Recommendations */}
@@ -460,7 +460,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
                     </p>
                     {result.soilRecommendations.map((rec, i) => (
                       <div key={i} style={{ display: "flex", gap: 12, marginBottom: 12, alignItems: "flex-start" }}>
-                        <span style={{ color: ACCENT, fontSize: 10, marginTop: 3, flexShrink: 0 }}>鈻?/span>
+                        <span style={{ color: ACCENT, fontSize: 10, marginTop: 3, flexShrink: 0 }}>▸</span>
                         <span style={{ fontSize: 12, color: "#a8c8a8", lineHeight: 1.7 }}>{rec}</span>
                       </div>
                     ))}
@@ -479,7 +479,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
                     }}
                   >
                     <p style={{ fontSize: 10, color: "#7a4a4a", letterSpacing: "0.2em", textTransform: "uppercase", margin: "0 0 14px" }}>
-                      鈿?Threats Detected
+                      ⚠ Threats Detected
                     </p>
                     {result.diseases?.filter(Boolean).map((d, i) => (
                       <Badge key={`d${i}`} text={`Disease: ${d}`} type="danger" />
@@ -498,7 +498,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
       {/* Footer */}
       <div style={{ maxWidth: 720, margin: "36px auto 0", textAlign: "center" }}>
         <p style={{ fontSize: 10, color: "#2a4a2a", letterSpacing: "0.12em", lineHeight: 1.7 }}>
-          Powered by Claude Vision AI &nbsp;路&nbsp; For guidance only &nbsp;路&nbsp; Consult a botanist for critical care
+          Powered by Claude Vision AI &nbsp;·&nbsp; For guidance only &nbsp;·&nbsp; Consult a botanist for critical care
         </p>
       </div>
     </div>
