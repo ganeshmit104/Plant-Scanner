@@ -498,7 +498,7 @@ Respond ONLY with a valid JSON object (no markdown, no extra text) with this exa
       {/* Footer */}
       <div style={{ maxWidth: 720, margin: "36px auto 0", textAlign: "center" }}>
         <p style={{ fontSize: 10, color: "#2a4a2a", letterSpacing: "0.12em", lineHeight: 1.7 }}>
-          Powered by Claude Vision AI &nbsp;·&nbsp; For guidance only &nbsp;·&nbsp; Consult a botanist for critical care
+           For guidance only &nbsp;·&nbsp; Consult a botanist for critical care
         </p>
       </div>
     </div>
